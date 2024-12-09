@@ -10,7 +10,6 @@ mother(alice, bob).
 mother(alice, betsy).
 mother(alice, bill).
 
-% Grandparent rule: A grandparent is a parent of someone's parent
 grandparent(GP, C) :- father(GP, P), father(P, C).  % Grandfather via father
 grandparent(GP, C) :- father(GP, P), mother(P, C).  % Grandfather via mother
 grandparent(GP, C) :- mother(GP, P), father(P, C).  % Grandmother via father
